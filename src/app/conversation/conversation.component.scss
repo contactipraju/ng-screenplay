@@ -1,0 +1,26 @@
+.conversation {
+    min-height: 100px;
+    max-height: 400px;
+    overflow-y: auto;
+    border: lightgrey solid 1px;
+
+    & > div {
+        margin: 2px;
+        padding: 5px;
+        font-size: 16px;
+        font-style: italic;
+    }
+
+    .first {
+        color: #333;
+        text-align: left;
+        padding-right: 50%;
+        background-color: #eee;
+    }
+
+    .second {
+        color: #888;
+        text-align: right;
+        padding-left: 50%;
+    }
+}

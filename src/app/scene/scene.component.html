@@ -1,0 +1,14 @@
+<div class="scene">
+  <div class="header">
+    <div class="firstperson">{{firstperson.firstname}}</div>
+    <div class="secondperson">{{secondperson.firstname}}</div>
+  </div>
+
+  <app-conversation [conv]="conversation"></app-conversation>
+
+  <div class="actions">
+    <button type="button" (click)="addDialogue(firstperson)"><span class="btn-text">{{firstperson.firstname}}</span></button>
+    <textarea rows="4" cols="50" [(ngModel)]="dialogue" #message='ngModel' [disabled]="disabled"></textarea>
+    <button type="button" (click)="addDialogue(secondperson)"><span class="btn-text">{{secondperson.firstname}}</span></button>
+  </div>
+</div>
