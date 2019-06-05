@@ -1,0 +1,5 @@
+<div class="conversation">
+  <div *ngIf="conv.length">
+    <div *ngFor="let line of conv" [ngClass]="line.klass">{{line.what}}</div>
+  </div>
+</div>
