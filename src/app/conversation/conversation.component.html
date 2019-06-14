@@ -2,9 +2,9 @@
   <div *ngIf="conv.length">
     <div *ngFor="let line of conv" class="message" [ngClass]="line.klass">
       <div class="actions">
-        <i *ngIf="line.klass == 'second'" class="icon fas fa-arrow-left"></i>
-        <i class="icon fas fa-trash"></i>
-        <i *ngIf="line.klass == 'first'" class="icon fas fa-arrow-right"></i>
+        <i *ngIf="line.klass == 'second'" class="icon fas fa-arrow-left" (click)="moveLeft(line)"></i>
+        <i class="icon fas fa-trash" (click)="deleteLine(line)"></i>
+        <i *ngIf="line.klass == 'first'" class="icon fas fa-arrow-right" (click)="moveRight(line)"></i>
       </div>
       <div class="text">{{line.what}}</div>
     </div>

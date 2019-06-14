@@ -17,6 +17,18 @@ export class ConversationComponent implements OnInit, OnChanges {
   ngOnInit() {
   }
 
+  moveLeft(line: Dialogue) {
+    console.log("Move Left: ", line);
+  }
+
+  moveRight(line: Dialogue) {
+    console.log("Move Right: ", line);
+  }
+
+  deleteLine(line: Dialogue) {
+    console.log("Delete Line: ", line);
+  }
+
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
     console.log("changes: ", changes);
   }
