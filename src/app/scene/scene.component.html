@@ -8,7 +8,7 @@
 
   <div class="actions">
     <button type="button" (click)="addDialogue(firstperson)"><span class="btn-text">{{firstperson.firstname}}</span></button>
-    <textarea rows="4" cols="50" [(ngModel)]="dialogue" #message='ngModel' [disabled]="disabled"></textarea>
+    <textarea class="text-area" rows="4" cols="50" [(ngModel)]="dialogue" #message='ngModel' [disabled]="disabled" (keypress)="keyPress($event)"></textarea>
     <button type="button" (click)="addDialogue(secondperson)"><span class="btn-text">{{secondperson.firstname}}</span></button>
   </div>
 </div>

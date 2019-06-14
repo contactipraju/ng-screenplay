@@ -18,6 +18,9 @@ export class SceneComponent implements OnInit {
     this.secondperson = { id: 2, firstname: "DIANE", lastname: "" };
   }
 
+  ngOnInit() {
+  }
+
   addDialogue(person: Person) {
     let d: Dialogue = {
       who: person.id,
@@ -30,6 +33,17 @@ export class SceneComponent implements OnInit {
     this.dialogue = "";
   }
 
-  ngOnInit() {
+  keyPress(e: any) {
+    if(e.ctrlKey) {
+      switch(e.keyCode) {
+        case 0: // Ctrl + Space
+          this.addDialogue(this.firstperson);
+        break;
+
+        case 10: // Ctrl + Enter
+          this.addDialogue(this.secondperson);
+        break;
+      }
+    }
   }
 }
