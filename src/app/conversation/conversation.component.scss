@@ -11,16 +11,44 @@
         font-style: italic;
     }
 
+    .message {
+        position: relative;
+
+        .actions {
+            display: none;
+            position: absolute;
+
+            .icon {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    .message:hover {
+        .actions {
+            display: block;
+        }
+    }
+
     .first {
         color: #333;
         text-align: left;
         padding-right: 50%;
         background-color: #eee;
+
+        .actions {
+            right: 50%;
+        }
     }
 
     .second {
         color: #888;
         text-align: right;
         padding-left: 50%;
+
+        .actions {
+            left: 50%;
+        }
     }
 }

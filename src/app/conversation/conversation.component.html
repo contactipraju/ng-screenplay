@@ -1,5 +1,12 @@
 <div class="conversation">
   <div *ngIf="conv.length">
-    <div *ngFor="let line of conv" [ngClass]="line.klass">{{line.what}}</div>
+    <div *ngFor="let line of conv" class="message" [ngClass]="line.klass">
+      <div class="actions">
+        <i *ngIf="line.klass == 'second'" class="icon fas fa-arrow-left"></i>
+        <i class="icon fas fa-trash"></i>
+        <i *ngIf="line.klass == 'first'" class="icon fas fa-arrow-right"></i>
+      </div>
+      <div class="text">{{line.what}}</div>
+    </div>
   </div>
 </div>
