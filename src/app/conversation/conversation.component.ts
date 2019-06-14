@@ -8,7 +8,7 @@ import { OnChanges, SimpleChange } from '@angular/core';
   styleUrls: ['./conversation.component.scss']
 })
 export class ConversationComponent implements OnInit, OnChanges {
-  @Input() conv: string[];
+  @Input() conv: Dialogue[];
 
   constructor() {
   }
