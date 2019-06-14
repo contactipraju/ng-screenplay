@@ -1,5 +1,5 @@
 .scene {
-    width: 800px;
+    max-width: 800px;
     padding: 20px;
 
     margin-left: auto;
@@ -28,6 +28,10 @@
 
         margin-left: auto;
         margin-right: auto;
+
+        .text-area {
+            flex-grow: 2;
+        }
 
         button {
             width: 80px;
